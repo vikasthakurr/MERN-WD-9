@@ -7,3 +7,6 @@ aria tag notes: https://web.dev/learn/accessibility/aria-html#:~:text=ARIA%20is%
 To join the video meeting, click this link: https://meet.google.com/cij-zfsr-iff
 Otherwise, to join by phone, dial +1 385-645-7714 and enter this PIN: 311 873 162#
 To view more phone numbers, click this link: https://tel.meet/cij-zfsr-iff?hs=5
+
+
+Github setup class recording of google meet: https://drive.google.com/file/d/1eC0d09JZPr366Cu9-4kjI91Br2cRvBu6/view?usp=sharing
