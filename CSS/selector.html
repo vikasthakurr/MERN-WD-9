@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* universal selector */
+      /* *{
+            color: red;
+        } */
+      /* element selector */
+      /* h1{
+        color: green;
+      } */
+      /* p {
+        color: blue;
+        font-size: 30px;
+      } */
+      /* group selector */
+      /* h1,
+      p {
+        color: green;
+      } */
+
+      /* class selector */
+      /* .one {
+        color: red;
+        font-style: italic;
+      } */
+      /* id selector */
+      #two {
+        color: blue;
+      }
+      /* nth selector */
+      p:nth-child(even) {
+        color: red;
+      }
+      input[type="text"] {
+        color: red;
+      }
+      input::placeholder {
+        color: blue;
+      }
+      li::marker {
+        color: red;
+      }
+      h1::after {
+        content: "";
+      }
+      h1::before {
+        content: "my name is ";
+      }
+
+      button:hover {
+        background-color: yellow;
+        /* padding: 10px 40px; */
+      }
+      .one > h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 class="one">this is heading 1</h1>
+    <p>this is paragraph</p>
+    <h1 class="one">this is heading 2</h1>
+    <h1 class="one">this is heading 3</h1>
+    <h1 class="one">this is heading 4</h1>
+    <h1 id="two">this is heading 5</h1> -->
+    <!-- <p>vikas-1</p>
+    <p>vikas-2</p>
+    <p>vikas-3</p>
+    <p>vikas-4</p>
+    <p>vikas-5</p>
+    <input type="text" placeholder="enter your name">
+    <input type="text" placeholder="enter your email"> -->
+    <!-- <ul>
+        <li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+        <li>list-4</li>
+    </ul>
+    <h1>Vikas</h1>
+    <button>hit me</button> -->
+
+    <div class="one">
+      <h1>this is heading</h1>
+    </div>
+  </body>
+</html>
+
+<!-- 
+CSS Selectors 
+
+
+1. Element Selector:
+   - The element selector selects all HTML elements of a specific type.
+   - Example: To style all `<p>` elements with a red color.
+
+    p {
+       color: red;
+   }
+  
+2. Class Selector:
+   - The class selector selects elements with a specific class attribute.
+   - Example: To style all elements with the class "button" with a blue background.
+
+   .button {
+       background-color: blue;
+   }
+ 
+3. ID Selector:
+   - The ID selector selects a single element with a unique ID attribute.
+   - Example: To style an element with the ID "header" with a larger font size.
+
+   #header {
+       font-size: 24px;
+   }
+ 
+4. Child Selector:
+   - The child selector selects elements that are direct children of a specified element.
+   - Example: To style all `<a>` elements that are direct children of a `<nav>` element.
+
+6. Pseudo-class Selector:
+   - Pseudo-classes select elements based on their state or position.
+   - Example: To style a link when it is hovered over.
+
+   a:hover {
+       color: purple;
+   }
+
+7. Attribute Selector:
+   - Attribute selectors select elements with a specific attribute and value.
+   - Example: To style all `<input>` elements with the "type" attribute set to "text."
+
+   input[type="text"] {
+       border: 1px solid gray;
+   }
+
+8. Universal Selector:
+   - The universal selector selects all elements on a page.
+   - Example: To reset margins and padding for all elements.
+
+   * {
+       margin: 0;
+       padding: 0;
+   } -->
