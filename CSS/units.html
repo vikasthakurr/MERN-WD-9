@@ -4,19 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      html {
+        font-size: 30px;
+      }
       * {
         margin: 0;
         padding: 0;
       }
-      .box {
-        width: 800px;
-        height: 800px;
+      .parent {
+        width: 600px;
+        height: 600px;
         background-color: red;
+      }
+      .child {
+        width: 100vw;
+        height: 50vh;
+        background-color: blue;
+      }
+      .text {
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: bold;
+        font-family: "Edu AU VIC WA NT Arrows", cursive;
       }
     </style>
   </head>
   <body>
-    <div class="box">box</div>
+    <!-- <div class="parent">
+      <div class="child">child</div>
+    </div> -->
+    <div class="text">
+      <h1>vikas</h1>
+    </div>
   </body>
 </html>

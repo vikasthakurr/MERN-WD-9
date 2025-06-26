@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color: white;
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+      }
+      /* .parent {
+        width: 600px;
+        height: 600px;
+        background-color: blue;
+      } */
+      .child {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        padding: 71px;
+        border: 30px solid;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="child">child</div>
+  </body>
+</html>
+
+<!-- 
+1. Width and Height:
+   The `width` and `height` properties determine the dimensions of an element. For instance, you can set a div element's width and height like this:
+
+   .box {
+     width: 200px;
+     height: 100px;
+   }
+  
+2. Padding:
+   Padding adds space inside the element's border. It can be specified individually for each side (top, right, bottom, left) or as a single value for all sides:
+
+   .box {
+     padding: 20px; /* Adds 20px padding to all sides */
+     padding-top: 10px;
+     padding-left: 30px;
+   }
+
+3. Margin:
+   Margin adds space outside the element's border, creating separation between elements. Similar to padding, you can specify margins individually or as a single value for all sides:
+
+      .box {
+     margin: 10px; /* Applies 10px margin to all sides */
+     margin-top: 20px;
+     margin-right: 30px;
+   }
+
+4. Border:
+   Borders can be added to elements using properties like `border-width`, `border-style`, and `border-color`. For example:
+
+   .box {
+     border: 2px solid #333; /* 2px solid border with a color */
+     border-radius: 5px; /* Rounded corners */
+   }
+5.The box-sizing property in CSS is used to control how the total width and height of an element is calculated, including its content, padding, and border. It allows you to specify whether these properties should be included in the element's defined width and height, or if they should be added to it.
+
+
+
+
+
+
+
+There are two main values for the box-sizing property:
+
+content-box (default):
+
+In the default content-box value, the width and height of an element are calculated excluding the padding and border. This means that if you set a width or height for an element, it only applies to the content area, and any padding and border are added to it.
+
+border-box:
+
+In the border-box value, the width and height of an element include both the content, padding, and border. This means that if you set a width or height for an element, it includes the content, padding, and border within that specified width and height.
+
+
+ 
+
+ -->
