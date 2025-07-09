@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 100vw;
+        height: 100vh;
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* flex-wrap: wrap; */
+      }
+      .child {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child one">item-1</div>
+      <div class="child two">item-2</div>
+      <div class="child three">item-3</div>
+      <!-- <div class="child four">item-4</div>
+      <div class="child five">item-5</div>
+      <div class="child six">item-6</div>
+      <div class="child seven">item-7</div> -->
+    </div>
+  </body>
+</html>
+
+
+
+<!-- 1. `display: flex;`
+   - This property is used to define an element as a flex container.
+   - It enables a flex context for its child elements.
+   - By default, child elements will be laid out in a row, which is the main axis.
+
+2. `flex-direction: row | row-reverse | column | column-reverse;`
+   - Determines the main axis along which flex items are laid out within the container.
+   - Possible values:
+     - `row` (default): Items are placed horizontally from left to right.
+     - `row-reverse`: Items are placed horizontally from right to left.
+     - `column`: Items are placed vertically from top to bottom.
+     - `column-reverse`: Items are placed vertically from bottom to top.
+
+3. `flex-wrap: nowrap | wrap | wrap-reverse;`
+   - Defines whether flex items should wrap to the next line when they don't fit in a single line.
+   - Possible values:
+     - `nowrap` (default): Items stay in a single line and may overflow the container.
+     - `wrap`: Items wrap to the next line if necessary.
+     - `wrap-reverse`: Items wrap to the next line, but in reverse order.
+
+4. `flex-flow: <flex-direction> <flex-wrap>;`
+   - A shorthand property that combines `flex-direction` and `flex-wrap` properties.
+   - Example: `flex-flow: row wrap;` sets the main axis to horizontal and allows items to wrap to the next line.
+
+5. `justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;`
+   - Determines how flex items are distributed along the main(x) axis.
+   - Possible values:
+     - `flex-start` (default): Items are aligned to the start of the main axis.
+     - `flex-end`: Items are aligned to the end of the main axis.
+     - `center`: Items are centered along the main axis.
+     - `space-between`: Items are evenly distributed along the main axis with space between them.
+     - `space-around`: Items are evenly distributed with space around them.
+     - `space-evenly`: Items are evenly distributed with equal space around and between them.
+
+6. `align-items: flex-start | flex-end | center    - Specifies how flex items are aligned along the cross(y)-axis (perpendicular to the main axis).
+   - Possible values:
+     - `flex-start`: Items are aligned to the start of the cross-axis.
+     - `flex-end`: Items are aligned to the end of the cross-axis.
+     - `center`: Items are centered along the cross-axis.
+      - `stretch` (default): Items are stretched to fill the container's cross-axis.
+
+7. `align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch;`
+   - Similar to `align-items`, but it aligns the flex lines (rows when `flex-direction` is row and columns when `flex-direction` is column) within the flex container.
+   - It works when there is extra space along the cross-axis.
+   - Possible values are the same as `align-items`.
+
+8. `flex-grow: <number>;`
+   - Specifies how flex items should grow to fill available space along the main axis.
+   - A higher value will make an item grow more compared to others.
+
+9. `flex-shrink: <number>;`
+   - Specifies how flex items should shrink if there's not enough space along the main axis.
+   - A higher value makes an item shrink more compared to others. -->
+
+
+
