@@ -73,11 +73,11 @@
 
 
 
-(function sayHi() {
-  console.log("hello");
-})();
+// (function sayHi() {
+//   console.log("hello");
+// })();
 
-sayHi();
+// sayHi();
 
 // let name = "vikas";
 // let name2 = name;

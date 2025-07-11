@@ -10,3 +10,6 @@ To view more phone numbers, click this link: https://tel.meet/cij-zfsr-iff?hs=5
 
 
 Github setup class recording of google meet: https://drive.google.com/file/d/1eC0d09JZPr366Cu9-4kjI91Br2cRvBu6/view?usp=sharing
+
+
+practice question for loops and conditionals:https://docs.google.com/document/d/1-RK2a54-51gbyUXdNUghleTNaDmMcfPO8gNnwzrmeQI/edit?usp=sharing
