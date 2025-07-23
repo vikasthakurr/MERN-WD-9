@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo list</title>
+    <style>
+      .container {
+        width: 350px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #f8f8f8;
+      }
+      h1 {
+        text-align: center;
+      }
+      input {
+        width: 300px;
+        padding: 10px;
+        /* margin-bottom: 10px; */
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      ul {
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      li button {
+        width: auto;
+        padding: 5px 10px;
+        background-color: #ffcdd2;
+        border: none;
+        cursor: pointer;
+      }
+      #deleteAll {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+      <input id="task" type="text" placeholder="Enter your task" />
+      <button onclick="addTask()">Add Task</button>
+      <button id="deleteAll" onclick="deleteAll()">Delete All</button>
+      <ul id="taskList"></ul>
+    </div>
+  </body>
+
+  <script>
+    // --- DOM Element Selection ---
+    // Get references to the essential HTML elements we'll be working with.
+    // This is more efficient than searching for them every time we need them.
+    const input = document.querySelector("#task");
+    const list = document.querySelector("#taskList");
+    const deleteAllBtn = document.querySelector("#deleteAll");
+
+    // --- Function to Update "Delete All" Button Visibility ---
+    // This function checks if there are any tasks in the list and shows or hides
+    // the "Delete All" button accordingly.
+    const updateDeleteAllBtnState = () => {
+      // We use a ternary operator as a concise if-else statement.
+      // If the number of child elements (<li>) in the list is greater than 0,
+      // set the button's display style to "block" (making it visible).
+      // Otherwise, set it to "none" (hiding it).
+      deleteAllBtn.style.display = list.children.length > 0 ? "block" : "none";
+    };
+
+    // --- Function to Add a New Task ---
+    // This function is called when the "Add Task" button is clicked.
+    const addTask = () => {
+      // Get the text from the input field and use .trim() to remove any
+      // leading or trailing whitespace.
+      const taskText = input.value.trim();
+
+      // --- Input Validation ---
+      // If the input is empty after trimming, show an alert and stop the function.
+      if (taskText === "") {
+        alert("please enter a task");
+        return; // 'return' exits the function early.
+      }
+
+      // --- Create New HTML Elements ---
+      // Create the list item element that will hold the task.
+      const newli = document.createElement("li");
+
+      // Create a <span> to hold the task's text. This helps separate
+      // the text from the remove button within the list item.
+      const taskSpan = document.createElement("span");
+      taskSpan.textContent = taskText; // Use .textContent for security (prevents HTML injection).
+
+      // Create the "Remove" button for this specific task.
+      const removeBtn = document.createElement("button");
+      removeBtn.textContent = "Remove";
+
+      // --- Add Event Listener for the Remove Button ---
+      // Define what happens when this specific "Remove" button is clicked.
+      removeBtn.onclick = () => {
+        // 'newli' is the <li> element we created earlier.
+        // We remove this specific list item from its parent (the <ul>).
+        list.removeChild(newli);
+
+        // After removing a task, we need to check if the "Delete All" button
+        // should now be hidden (e.g., if it was the last task).
+        updateDeleteAllBtnState();
+      };
+
+      // --- Assemble and Append to DOM ---
+      // Append the text span and the remove button to the list item.
+      newli.appendChild(taskSpan);
+      newli.appendChild(removeBtn);
+
+      // Add the fully assembled list item (<li>) to the task list (<ul>).
+      list.appendChild(newli);
+
+      // --- Final Cleanup ---
+      // Clear the input field so the user can enter a new task.
+      input.value = "";
+      // Update the "Delete All" button's visibility, as we've just added a task.
+      updateDeleteAllBtnState();
+    };
+
+    // --- Function to Delete All Tasks ---
+    // This function is called when the "Delete All" button is clicked.
+    const deleteAll = () => {
+      // The fastest way to remove all child elements from the list.
+      list.innerHTML = "";
+      // After deleting all tasks, hide the "Delete All" button.
+      updateDeleteAllBtnState();
+    };
+    // --- Initial Setup on Page Load ---
+    // When the page first loads, call this function to ensure the "Delete All"
+    // button is hidden, since the list is initially empty.
+    updateDeleteAllBtnState();
+  </script>
+</html>

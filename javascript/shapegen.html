@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .circle {
+        width: 100px;
+        height: 100px;
+
+        border-radius: 50%;
+        position: absolute;
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+
+        position: absolute;
+      }
+      .rectangle {
+        width: 200px;
+        height: 100px;
+
+        position: absolute;
+      }
+      .canvas {
+        position: relative;
+        width: 700px;
+        height: 500px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="details">
+      <select name="shape" id="option">
+        <option value="circle">circle</option>
+        <option value="square">square</option>
+        <option value="rectangle">rectangle</option>
+      </select>
+    </div>
+    <div class="canvas"></div>
+    <script>
+      const color = ["red", "green", "blue"];
+      const randomIndex = Math.floor(Math.random() * color.length);
+      let canvas = document.querySelector(".canvas");
+
+      canvas.addEventListener("click", function (e) {
+        let text = document.querySelector("#option");
+
+        let shape = document.createElement("div");
+        if (text.value === "circle") {
+          shape.style.left = e.clientX - 50 + "px";
+          shape.style.top = e.clientY - 50 + "px";
+          shape.style.backgroundColor = color[randomIndex];
+          shape.classList.add("circle");
+        } else if (text.value === "square") {
+          shape.style.left = e.clientX - 50 + "px";
+          shape.style.top = e.clientY - 50 + "px";
+          shape.style.backgroundColor = color[randomIndex];
+          shape.classList.add("square");
+        } else if (text.value === "rectangle") {
+          shape.style.left = e.clientX - 50 + "px";
+          shape.style.top = e.clientY - 50 + "px";
+          shape.style.backgroundColor = color[randomIndex];
+          shape.classList.add("rectangle");
+        }
+        canvas.appendChild(shape);
+      });
+    </script>
+  </body>
+</html>

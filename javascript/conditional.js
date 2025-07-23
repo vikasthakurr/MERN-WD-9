@@ -18,16 +18,16 @@
 
 // let age = 16;
 
-// switch (age) {
-//   case 15:
-//     console.log("you are 15");
-//     break;
-//   case 18:
-//     console.log("you are 18");
-//     break;
-//   default:
-//     console.log("you have entered wrong age");
-//     break;
-// }
+switch (age) {
+  case 15:
+    console.log("you are 15");
+    break;
+  case 18:
+    console.log("you are 18");
+    break;
+  default:
+    console.log("you have entered wrong age");
+    break;
+}
 
 
