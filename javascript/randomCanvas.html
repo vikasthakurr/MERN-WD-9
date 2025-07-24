@@ -36,21 +36,20 @@
     <script>
       let container = document.querySelector(".container");
       const color = ["red", "blue", "green", "yellow", "purple", "orange"];
-      let shapeInput = document.querySelector("#shape");
-      let shape = shapeInput.value;
-      console.log(shape);
-
-      //   console.log(randomIndex);
 
       container.addEventListener("click", (e) => {
+        let shapeInput = document.querySelector("#shape");
+        let askedshape = shapeInput.value;
+        // console.log(askedshape);
+
         const randomIndex = Math.floor(Math.random() * color.length);
-        console.log(randomIndex);
+        // console.log(randomIndex);
         let shape = document.createElement("div");
-        shape.classList.add(shape);
+        shape.classList.add(askedshape);
         shape.style.backgroundColor = color[randomIndex];
 
-        circle.style.left = e.clientX - 50 + "px";
-        circle.style.top = e.clientY - 50 + "px";
+        shape.style.left = e.clientX - 50 + "px";
+        shape.style.top = e.clientY - 50 + "px";
 
         container.appendChild(shape);
       });
