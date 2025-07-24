@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: inline-block;
+        /* position: absolute; */
+      }
+      .rectangle {
+        width: 200px;
+        height: 100px;
+        display: inline-block;
+        /* position: absolute; */
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        /* position: absolute; */
+      }
+      .container {
+        width: 800px;
+        height: 700px;
+        background-color: antiquewhite;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="shape" placeholder="Enter shape type" />
+    <br />
+    <input type="color" id="color" placeholder="Enter color" />
+    <br />
+    <input type="number" id="size" placeholder="Enter size" />
+    <br />
+    <button id="generate">Generate Shape</button>
+
+    <div class="container"></div>
+
+    <script>
+      let container = document.querySelector(".container");
+      let btn = document.querySelector("#generate");
+
+      btn.addEventListener("click", (e) => {
+        let shapeInput = document.querySelector("#shape");
+        let demandedShape = shapeInput.value;
+
+        let colorInput = document.querySelector("#color");
+        let color = colorInput.value;
+
+        let quantityInput = document.querySelector("#size");
+        let quantity = quantityInput.value;
+
+        // console.log(shape, color, quantity);
+        for (let i = 0; i < quantity; i++) {
+          let shape = document.createElement("div");
+          shape.classList.add(demandedShape);
+          shape.style.backgroundColor = color;
+          container.appendChild(shape);
+        }
+      });
+    </script>
+  </body>
+</html>
