@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Canvas</title>
+    <style>
+      .container {
+        width: 700px;
+        height: 500px;
+        border: 1px solid black;
+        background-color: antiquewhite;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+      }
+      .rectangle {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="shape" id="shape" placeholder="Enter shape type" />
+    <div class="container"></div>
+
+    <script>
+      let container = document.querySelector(".container");
+      const color = ["red", "blue", "green", "yellow", "purple", "orange"];
+      let shapeInput = document.querySelector("#shape");
+      let shape = shapeInput.value;
+      console.log(shape);
+
+      //   console.log(randomIndex);
+
+      container.addEventListener("click", (e) => {
+        const randomIndex = Math.floor(Math.random() * color.length);
+        console.log(randomIndex);
+        let shape = document.createElement("div");
+        shape.classList.add(shape);
+        shape.style.backgroundColor = color[randomIndex];
+
+        circle.style.left = e.clientX - 50 + "px";
+        circle.style.top = e.clientY - 50 + "px";
+
+        container.appendChild(shape);
+      });
+    </script>
+  </body>
+</html>
