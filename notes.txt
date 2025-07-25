@@ -16,3 +16,9 @@ practice question for loops and conditionals:https://docs.google.com/document/d/
 
 
 dom documents:https://docs.google.com/document/d/1x6Grz7Wke-DoIQPzE-1T_EzL44pMn1FT62fnZPYLyho/edit?tab=t.0
+
+
+promises notes:https://docs.google.com/document/d/1oks_1VFbpaIAtjevZOKrFKn7wrAKpDmsTNN7NLOnv1M/edit?tab=t.0#heading=h.fctbu3i9hjuv
+
+
+async and await:https://docs.google.com/document/d/1PPBeRZq4eT4U2b6K_YV4wCTxUNWXQaYFhhvG8mNkQds/edit?tab=t.0#heading=h.5qbtolae0lbb

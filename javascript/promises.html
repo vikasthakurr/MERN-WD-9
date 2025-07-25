@@ -8,24 +8,24 @@
   <body>
     <h1>demo</h1>
     <script>
-      const GITHUB_API = "https://api.github.com/users/kushvijay234";
+      // const GITHUB_API = "https://api.github.com/users/kushvijay234";
 
-      fetch(GITHUB_API)
-        .then((response) => {
-          if (!response.ok) {
-            alert("something went wrong");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-        .finally(() => {
-          console.log("data fetched successfully");
-        });
+      // fetch(GITHUB_API)
+      //   .then((response) => {
+      //     if (!response.ok) {
+      //       alert("something went wrong");
+      //     }
+      //     return response.json();
+      //   })
+      //   .then((data) => {
+      //     console.log(data);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   })
+      //   .finally(() => {
+      //     console.log("data fetched successfully");
+      //   });
 
       //   const response = fetch(GITHUB_API);
       //   console.log(response);
@@ -46,6 +46,13 @@
 
       //   const promise2 = Promise.resolve("vikas");
       //   console.log(promise2);
+
+      async function print() {
+        setTimeout(() => {
+          console.log("vikas");
+        }, 2000);
+      }
+      print();
     </script>
   </body>
 </html>
