@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throttle Example</title>
+  <style>
+    body {
+      height: 2000px; /* To make scrolling possible */
+      background: linear-gradient(#ffcccc, #ccffcc);
+      font-family: Arial, sans-serif;
+    }
+    #log {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="log">Scroll position: 0</div>
+
+  <script>
+    
+    function throttle(func, limit) {
+      let inThrottle;
+      return function (...args) {
+        if (!inThrottle) {
+          func.apply(this, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      };
+    }
+
+    // Function to run on scroll
+    function handleScroll() {
+      document.getElementById('log').innerText = 
+        'Scroll position: ' + window.scrollY;
+      console.log('Scroll event fired at', new Date().toLocaleTimeString());
+    }
+
+    // Use throttling (1000ms)
+    const throttledScroll = throttle(handleScroll, 2000);
+
+    window.addEventListener('scroll', throttledScroll);
+  </script>
+</body>
+</html>
