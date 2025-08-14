@@ -25,3 +25,6 @@ async and await:https://docs.google.com/document/d/1PPBeRZq4eT4U2b6K_YV4wCTxUNWX
 
 
 //realvsvirtual:https://docs.google.com/document/d/1oIf2DxcXxl6oc08y7Eh-WEFRkThrP6LC10wTXEDXSHY/edit?tab=t.0
+
+
+fakejson product:https://dummyjson.com/products

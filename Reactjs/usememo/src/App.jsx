@@ -30,7 +30,7 @@ const App = () => {
       <button onClick={handleDecrement}>Decrement</button>
 
       <div>
-        <Child count={count} />
+        <Child sum={res} />
       </div>
     </>
   );
