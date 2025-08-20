@@ -6,9 +6,14 @@ const ViewTodo = () => {
   // console.log(todos)
 
   return (
-    <div>
+    <div className="mt-8">
       {todos.map((todo) => (
-        <div key={todo.id}>{todo.text}</div>
+        <div
+          key={todo.id}
+          className="flex justify-between items-center bg-gray-800 rounded border border-gray-700 p-4 my-2"
+        >
+          <div className="text-white">{todo.text}</div>
+        </div>
       ))}
     </div>
   );
