@@ -1,0 +1,55 @@
+Vite setup for React
+Folder structure understanding
+Component making and rendering
+Data passing using props
+Props drilling
+State update hook (useState)
+State lifting
+useEffect
+useEffect clean-up
+useRef
+useContext
+useMemo
+React.memo
+memo hook
+useCallback
+Custom hooks
+
+Intro to Tailwind CSS
+Tailwind setup in React project
+
+
+react-router-dom
+Link vs Anchor tag
+Context API
+Redux
+
+
+intro to node
+module and its versioning
+third party module
+file system
+http module
+server making using node
+req and res handling
+
+intro to express
+server making using express
+
+into to api
+api making using express
+postman
+middleware and its function
+multer (advanced feature)
+
+mongo db intro 
+setup to mongodb atlas and gui
+data oepration node to mongodb
+
+bcyrpt implementation
+
+project implementation
+ui making
+protected routes
+sorting and searching feature
+login and signup

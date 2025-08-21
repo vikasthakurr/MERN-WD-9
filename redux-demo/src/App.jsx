@@ -1,6 +1,8 @@
 import React from "react";
 import AddTodo from "./AddTodo";
 import ViewTodo from "./ViewTodo";
+import Casual from "./Casual";
+import General from "./General";
 
 const App = () => {
   return (
@@ -10,6 +12,8 @@ const App = () => {
       </h1>
       <AddTodo />
       <ViewTodo />
+      <Casual />
+      <General />
     </div>
   );
 };
