@@ -4,10 +4,10 @@
 // const server = http.createServer((req, res) => {
 //   res.writeHead(409, { "Content-Type": "text/plain" });
 //   res.end("hii from server");
-//   //   console.log(req.url);
-//   //   console.log(req.method);
-//   //   console.log(req.headers);
-//   //   console.log(req.body);
+//   console.log(req.url);
+//   console.log(req.method);
+//   console.log(req.headers);
+//   console.log(req.body);
 //   console.log(res);
 // });
 

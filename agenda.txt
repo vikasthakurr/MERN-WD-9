@@ -44,7 +44,7 @@ multer (advanced feature)
 
 mongo db intro 
 setup to mongodb atlas and gui
-data oepration node to mongodb
+data operation node to mongodb
 
 bcyrpt implementation
 

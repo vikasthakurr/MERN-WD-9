@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px;
+      }
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        width: 300px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+      .card h2 {
+        font-size: 1.2em;
+        margin: 0.5em 0;
+      }
+      .card p {
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      async function fetchData() {
+        const response = await fetch("https://dummyjson.com/products");
+        const { products } = await response.json();
+        const container = document.querySelector(".container");
+        products.map((item) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          const img = document.createElement("img");
+          img.src = item.thumbnail;
+          img.alt = item.title;
+
+          const title = document.createElement("h2");
+          title.innerText = item.title;
+
+          const description = document.createElement("p");
+          description.innerText = item.description;
+
+          const price = document.createElement("p");
+          price.innerText = `${item.price}`;
+
+          card.appendChild(img);
+          card.appendChild(title);
+          card.appendChild(description);
+          card.appendChild(price);
+
+          container.appendChild(card);
+        });
+      }
+
+      fetchData();
+    </script>
+  </body>
+</html>
