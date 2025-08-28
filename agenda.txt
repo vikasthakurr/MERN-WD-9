@@ -35,21 +35,25 @@ req and res handling
 
 intro to express
 server making using express
-
+hosting manual
 into to api
 api making using express
 postman
 middleware and its function
-multer (advanced feature)
 
+
+
+multer (advanced feature)
+nodemailer implementation
 mongo db intro 
 setup to mongodb atlas and gui
 data operation node to mongodb
-
+CRUD on api
 bcyrpt implementation
 
 project implementation
 ui making
+redux implementation
 protected routes
 sorting and searching feature
 login and signup
