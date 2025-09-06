@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 //connection with database...
 mongoose
   .connect(
-    "mongodb+srv://vikaskumar20012001:Vikas123@hyper-market.vzinuvr.mongodb.net/"
+    "put your mongodb connection string here...."
   )
   .then(() => {
     console.log("Connected to database");
