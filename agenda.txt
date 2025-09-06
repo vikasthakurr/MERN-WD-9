@@ -45,11 +45,11 @@ middleware and its function
 
 multer (advanced feature)
 nodemailer implementation
+
 mongo db intro 
 setup to mongodb atlas and gui
 data operation node to mongodb
 CRUD on api
-
 bcyrpt implementation
 mongodb indexing
 aggregation
