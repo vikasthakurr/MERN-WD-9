@@ -51,9 +51,13 @@ setup to mongodb atlas and gui
 data operation node to mongodb
 CRUD on api
 bcyrpt implementation
+
+
+
 mongodb indexing
 aggregation
 CI/CD pipelines
+
 
 project implementation
 ui making
