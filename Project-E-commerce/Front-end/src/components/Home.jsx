@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
-import Card from "./Card";
-import products from "../data-api/product";
+import Card from "./Card.jsx";
+import products from "../data-api/product.js";
 import { useSearch } from "../context/SearchContext.jsx";
 
 const Home = () => {
@@ -13,7 +13,10 @@ const Home = () => {
     priceRange: { min: 0, max: 3000 },
   });
 
-  const categories = useMemo(() => [...new Set(products.map((p) => p.category))], []);
+  const categories = useMemo(
+    () => [...new Set(products.map((p) => p.category))],
+    []
+  );
   const brands = useMemo(() => [...new Set(products.map((p) => p.brand))], []);
 
   const handleFilterChange = (filterType, value) => {
@@ -30,13 +33,22 @@ const Home = () => {
   };
 
   let filteredProducts = products.filter((product) => {
-    const searchMatch = product.title.toLowerCase().includes(search.toLowerCase());
-    const categoryMatch = filters.category.length === 0 || filters.category.includes(product.category);
-    const brandMatch = filters.brand.length === 0 || filters.brand.includes(product.brand);
+    const searchMatch = product.title
+      .toLowerCase()
+      .includes(search.toLowerCase());
+    const categoryMatch =
+      filters.category.length === 0 ||
+      filters.category.includes(product.category);
+    const brandMatch =
+      filters.brand.length === 0 || filters.brand.includes(product.brand);
     const ratingMatch = product.rating >= filters.rating;
-    const priceMatch = product.price >= filters.priceRange.min && product.price <= filters.priceRange.max;
+    const priceMatch =
+      product.price >= filters.priceRange.min &&
+      product.price <= filters.priceRange.max;
 
-    return searchMatch && categoryMatch && brandMatch && ratingMatch && priceMatch;
+    return (
+      searchMatch && categoryMatch && brandMatch && ratingMatch && priceMatch
+    );
   });
 
   if (sortBy) {
@@ -111,7 +123,12 @@ const Home = () => {
               min="0"
               max="3000"
               value={filters.priceRange.max}
-              onChange={(e) => handleFilterChange("priceRange", { ...filters.priceRange, max: Number(e.target.value) })}
+              onChange={(e) =>
+                handleFilterChange("priceRange", {
+                  ...filters.priceRange,
+                  max: Number(e.target.value),
+                })
+              }
               className="w-full"
             />
           </div>
@@ -122,9 +139,13 @@ const Home = () => {
       </aside>
       <main className="w-4/5 p-4">
         <div className="flex justify-between items-center mb-4">
-          <span className="text-lg">Showing {filteredProducts.length} of {products.length} products</span>
+          <span className="text-lg">
+            Showing {filteredProducts.length} of {products.length} products
+          </span>
           <div>
-            <label htmlFor="sort" className="mr-2">Sort by:</label>
+            <label htmlFor="sort" className="mr-2">
+              Sort by:
+            </label>
             <select
               id="sort"
               value={sortBy}
